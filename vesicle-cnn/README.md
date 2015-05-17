@@ -6,8 +6,9 @@ Note that this depends upon the Caffe-based Object Classification and
 Annotation (COCA) package [tbd](https://github.com/iscoe/coca).
 
 ### Reproducting paper results
-This is the "quick start" guide; please see the Makefile for more
-details.  Note this assumes you have a copy of the ISBI2013 
+Here are "quick start" instructions; please see the Makefile for more
+details.  Note this assumes you have a copy of the ISBI2013 data
+on your local system (again, see Makefile).
 
     vi Makefile   # change macros at top of makefile as needed 
     make coca
@@ -20,6 +21,6 @@ details.  Note this assumes you have a copy of the ISBI2013
     cd /scratch/pekalmj1/SynapseDetectionRun
     tar xvf ~/tocluster.tar
     cd vesicle-cnn
-    make train      # (or whatever target you want to run)
+    make train-all      # (or whatever target you want to run)
 
 
