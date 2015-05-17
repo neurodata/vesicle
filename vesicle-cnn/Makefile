@@ -1,25 +1,21 @@
 #-------------------------------------------------------------------------------
 # Uses Caffe to find synapses in electron microscropy (EM) data.
 #
-# EXAMPLE USAGE:
 #
-#   [STEP 1] Get a copy of the COCA repository
-#     make coca
+# SETUP/MISC TARGETS
 #
-#   [STEP 2] Get a copy of the EM data
-#     make data
+#  coca      :=  grabs a copy of the COCA package from github
+#  data      :=  copies data from local storage into local directory
+#  tar       :=  makes a tar file containing all source code (e.g. for copy to cluster)
+#  tar-all   := Like 'tar', but also includes matlab data files (these are large)
 #
-#   [STEP 3] Tar it all up and copy to the cluster
-#     make tar-all
+# CNN PROCESSING TARGETS
 #
-#   [STEP 4] CNN processing
-#     scp tocluster.tar gpucluster1:
-#     ssh -X gpucluster1
-#     mkdir /scratch/pekalmj1/SynapseDetectionRun
-#     cd /scratch/pekalmj1/SynapseDetectionRun
-#     tar xvf ~/tocluster.tar
-#     cd vesicle-cnn
-#     make train   (or whatever target you want to run)
+#  train-all       := Trains a CNN using all slices of training data
+#  train-and-valid := Trains using subset of training data and validates on rest
+#  deploy-train    := Evaluate a trained CNN on (entire) training volume
+#  deploy-test     := Evaluate a trained CNN on test volume
+#
 #
 #
 # NOTES:
@@ -34,6 +30,7 @@
 #-------------------------------------------------------------------------------
 
 
+#-------------------------------------------------------------------------------
 # Update these macros to match your local system configuration and desired experiment.
 #
 #   CAFFE_DIR :=  pointer to the PyCaffe directory (Caffe's Python API)
@@ -45,6 +42,7 @@
 #-------------------------------------------------------------------------------
 CAFFE_DIR := ~/Apps/caffe/python
 COCA_DIR := ./coca
+EM_DATA_DIR := ~/Data/SynapseData3
 
 TAR := tar
 TARFILE := tocluster.tar
@@ -73,7 +71,9 @@ TEST_MASK := ""
 MODEL := $(SYN_OUT_DIR)/iter_080000.caffemodel
 
 
-# The remaining macros should be system-independent
+#-------------------------------------------------------------------------------
+# Everything from here on down should be system-independent
+# (so hopefully no changes needed beyond this point)
 #-------------------------------------------------------------------------------
 dirname = $(patsubst %/,%,$(dir $1))
 
@@ -89,13 +89,8 @@ PACKAGE_NAME   := $(notdir $(call dirname,$(MKFILE_PATH)))
 PY_PATH := $(CAFFE_DIR):$(COCA_DIR)
 
 
-# Targets
-#
-#  coca    :=  grabs a copy of the COCA package from github
-#  data    :=  copies data from local storage into local directory
-#  tar     :=  makes a tar file containing all source code (e.g. for copy to cluster)
-#  tar-all := Like 'tar', but also includes matlab data files (these are large)
-#
+#-------------------------------------------------------------------------------
+# SETUP/MISC TARGETS
 #-------------------------------------------------------------------------------
 default :
 	@echo "please select a specific target"
@@ -103,10 +98,9 @@ default :
 coca :
 	git clone https://github.com/iscoe/coca.git
 
-# TODO: get data from somewhere globally accessible?
 data :
 	mkdir -p caffe_files/$(SYN_IN_DIR)
-	cp ~/Data/SynapseData3/X_train.mat ~/Data/SynapseData3/X_test.mat ~/Data/SynapseData3/Y_train2.mat caffe_files/$(SYN_IN_DIR)
+	cp $(EM_DATA_DIR)/X_train.mat $(EM_DATA_DIR)/X_test.mat $(EM_DATA_DIR)/Y_train2.mat caffe_files/$(SYN_IN_DIR)
 
 tar :
 	\rm -f $(TARFILE)
@@ -120,7 +114,8 @@ tar-all : tar
 
 
 #-------------------------------------------------------------------------------
-
+# CNN PROCESSING TARGETS
+#-------------------------------------------------------------------------------
 train-all:
 	PYTHONPATH=$(PY_PATH) nohup python $(COCA_DIR)/train.py  \
 		-X $(SYN_IN_DIR)/X_train.mat \
