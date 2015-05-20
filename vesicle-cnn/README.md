@@ -19,6 +19,7 @@ on your local system (again, see Makefile).
     # You'll then want to put this on a machine with a GPU (for us, this is
     # "gpucluster1".  Unpackage the tarball somewhere and launch some 
     # makefile target.
+    #
     scp tocluster.tar gpucluster1:
     ssh -X gpucluster1
     mkdir /scratch/pekalmj1/SynapseDetectionRun
