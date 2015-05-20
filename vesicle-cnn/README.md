@@ -13,8 +13,12 @@ on your local system (again, see Makefile).
     vi Makefile   # change macros at top of makefile as needed 
     make coca
     make data
-	make tar-all
+    make tar-all
 
+    # The above should create a file "tocluster.tar" with all the code and data.
+    # You'll then want to put this on a machine with a GPU (for us, this is
+    # "gpucluster1".  Unpackage the tarball somewhere and launch some 
+    # makefile target.
     scp tocluster.tar gpucluster1:
     ssh -X gpucluster1
     mkdir /scratch/pekalmj1/SynapseDetectionRun
