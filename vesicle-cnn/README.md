@@ -5,7 +5,7 @@ This directory contains the scripts/information needed to run the Caffe CNN syna
 Note that this depends upon the Caffe-based Object Classification and
 Annotation [(COCA)](https://github.com/iscoe/coca) package.
 
-### Reproducting paper results
+### Reproducing paper results
 Here are "quick start" instructions; please see the Makefile for more
 details.  Note this assumes you have a copy of the ISBI2013 data
 on your local system (again, see Makefile).
