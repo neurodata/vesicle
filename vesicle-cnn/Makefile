@@ -4,10 +4,12 @@
 #
 # SETUP/MISC TARGETS
 #
-#  coca      :=  grabs a copy of the COCA package from github
-#  data      :=  copies data from local storage into local directory
-#  tar       :=  makes a tar file containing all source code (e.g. for copy to cluster)
-#  tar-all   := Like 'tar', but also includes matlab data files (these are large)
+#  coca     := grabs a copy of the COCA package from github
+#  data     := copies data from local storage into local directory
+#  tar      := makes a tar file containing all source code (e.g. for copy to cluster)
+#  tar-all  := Like 'tar', but also includes matlab data files (these are large)
+#
+#  clean    := removes items created by above targets
 #
 # CNN PROCESSING TARGETS
 #
@@ -96,7 +98,7 @@ default :
 	@echo "please select a specific target"
 
 coca :
-	git clone https://github.com/iscoe/coca.git
+	git clone --depth=1 https://github.com/iscoe/coca.git
 
 data :
 	mkdir -p caffe_files/$(SYN_IN_DIR)
@@ -112,6 +114,10 @@ tar :
 tar-all : tar
 	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name *.mat -print`
 
+
+clean :
+	\rm -f $(TARFILE) $(SYN_IN_DIR)/X_train.mat $(SYN_IN_DIR)/X_test.mat  $(SYN_IN_DIR)/Y_train2.mat
+	\rm -rf ./coca
 
 #-------------------------------------------------------------------------------
 # CNN PROCESSING TARGETS
