@@ -113,7 +113,7 @@ tar :
 
 
 tar-all : tar
-	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name *.mat -print`
+	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME)/caffe_files -name *.mat -print`
 
 
 clean :
