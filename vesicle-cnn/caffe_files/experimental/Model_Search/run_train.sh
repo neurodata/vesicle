@@ -23,7 +23,7 @@ GPU_ID="$2"
 echo "Caffe solver file: $SOLVER_FILE"
 echo "GPU ID:            $GPU_ID"
 
-PYTHONPATH=~/Apps/caffe/python nohup python $COCA_DIR/train.py \
+PYTHONPATH=~/Apps/caffe/python python $COCA_DIR/train.py \
            -X $DATA_DIR/X_train.mat \
            -Y $DATA_DIR/Y_train2.mat \
            --train-slices "range(0,70)" \
@@ -31,4 +31,4 @@ PYTHONPATH=~/Apps/caffe/python nohup python $COCA_DIR/train.py \
            --rotate-data 1 \
            -s $SOLVER_FILE \
            --omit-labels "[-1,]" \
-           -gpu $GPU_ID &> nohup.train.and.valid.synapse &
+           -gpu $GPU_ID
