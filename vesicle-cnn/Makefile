@@ -108,6 +108,7 @@ tar :
 	\rm -f $(TARFILE)
 	pushd .. && $(TAR) cvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name \*.py -print`
 	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name \*.prototxt -print`
+	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name \*.sh -print`
 	pushd .. && $(TAR) rvf $(PACKAGE_NAME)/$(TARFILE) `find $(PACKAGE_NAME) -name Makefile* -print`
 
 
