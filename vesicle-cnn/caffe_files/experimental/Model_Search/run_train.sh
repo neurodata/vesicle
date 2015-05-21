@@ -23,11 +23,17 @@ GPU_ID="$2"
 echo "Caffe solver file: $SOLVER_FILE"
 echo "GPU ID:            $GPU_ID"
 
+# NOTE: I reduced the size of the validation data set, primarily for
+#       speed.  It's not obvious from looking at this script, but I
+#       also downsampled the positive class to speed up the training.
+#       Need to be a bit careful that these changes don't impact the
+#       model selection results.
+
 PYTHONPATH=~/Apps/caffe/python python $COCA_DIR/train.py \
            -X $DATA_DIR/X_train.mat \
            -Y $DATA_DIR/Y_train2.mat \
            --train-slices "range(0,70)" \
-           --valid-slices "range(70,100)" \
+           --valid-slices "[80, 85, 90, 95, 99]" \
            --rotate-data 1 \
            -s $SOLVER_FILE \
            --omit-labels "[-1,]" \
