@@ -38,7 +38,7 @@ layers {
   weight_decay: 1
   weight_decay: 1
   convolution_param {
-    num_output: 48             #! DiscreteUniform(32,96)
+    num_output: 48             #! DiscreteUniform(12,96)
     pad: 0
     kernel_size: 5
     stride: 1
@@ -81,7 +81,7 @@ layers {
   weight_decay: 1
   weight_decay: 1
   convolution_param {
-    num_output: 48             #! DiscreteUniform(32,96)
+    num_output: 48             #! DiscreteUniform(12,96)
     pad: 0
     kernel_size: 5
     stride: 1
@@ -124,7 +124,7 @@ layers {
   weight_decay: 1
   weight_decay: 1
   convolution_param {
-    num_output: 48             #! DiscreteUniform(32, 96)
+    num_output: 48             #! DiscreteUniform(12, 96)
     pad: 0
     kernel_size: 5
     stride: 1
