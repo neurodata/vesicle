@@ -11,7 +11,10 @@ name: "N3-Stride2"
 
 # 65 is a decent lower bound for the tile size, since this leaves a very small
 # (about 5x5) tile at the end of pool3.
-#! TILE_SIZE := DiscreteUniform(65, 150)
+#
+# Note that the python training procedure assumes the tile size is odd!
+# TODO: how much worse it is (from a GP search standpoint) to use Enum vs DiscreteUniform...
+#! TILE_SIZE := Enum(range(65, 155, 2))
 
 
 layers {
