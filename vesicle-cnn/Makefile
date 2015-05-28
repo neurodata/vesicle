@@ -39,9 +39,18 @@
 #   EM_DATA_DIR  := Where you have a local copy of the EM data and labels.
 #                   This should be a directory with matlab files "X_train.mat"
 #                   "Y_train2.mat" and "X_test.mat".
+#
+# If you downloaded the COCA package manually, you'll may also need to change:
+#
+#   COCA_DIR     := pointer to where COCA package lives
+# 
+# If instead of downloading manually you use the 'make coca' target you 
+# can leave this macro unchanged.
 #-------------------------------------------------------------------------------
 CAFFE_DIR := ~/Apps/caffe/python
 EM_DATA_DIR := ~/Data/SynapseData3
+
+COCA_DIR := ./coca
 
 
 #-------------------------------------------------------------------------------
@@ -51,11 +60,6 @@ EM_DATA_DIR := ~/Data/SynapseData3
 # The macros in the next section control the experiment setup and can be 
 # changed if you want to try a different experiment.
 #-------------------------------------------------------------------------------
-
-# This is where the 'coca' target will put the files from github.
-# (or if you checkout manually, where the files live)
-#
-COCA_DIR := ./coca
 
 # may want to change TAR to 'gnutar' if you are on OSX and have gnutar.
 #
