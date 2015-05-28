@@ -33,49 +33,69 @@
 
 
 #-------------------------------------------------------------------------------
-# Update these macros to match your local system configuration and desired experiment.
+# Update these macros to match your local system configuration:
 #
-#   CAFFE_DIR :=  pointer to the PyCaffe directory (Caffe's Python API)
-#   TAR :=  Set to "tar" for a linux system; use "tar" or "guntar" for OSX
-#
-#   SYN_OUT_DIR := CNN outputs will be placed in caffe_files/$(SYN_OUT_DIR)
-#   SYN_IN_DIR := CNN inputs (prototxt and data) will live in caffe_files/$(SYN_IN_DIR)
-#
+#   CAFFE_DIR    := pointer to the PyCaffe directory (Caffe's Python API)
+#   EM_DATA_DIR  := Where you have a local copy of the EM data and labels.
+#                   This should be a directory with matlab files "X_train.mat"
+#                   "Y_train2.mat" and "X_test.mat".
 #-------------------------------------------------------------------------------
 CAFFE_DIR := ~/Apps/caffe/python
-COCA_DIR := ./coca
 EM_DATA_DIR := ~/Data/SynapseData3
 
+
+#-------------------------------------------------------------------------------
+# Everything else from here down should be system independent and can be left
+# at the default values.  
+#
+# The macros in the next section control the experiment setup and can be 
+# changed if you want to try a different experiment.
+#-------------------------------------------------------------------------------
+
+# This is where the 'coca' target will put the files from github.
+# (or if you checkout manually, where the files live)
+#
+COCA_DIR := ./coca
+
+# may want to change TAR to 'gnutar' if you are on OSX and have gnutar.
+#
 TAR := tar
 TARFILE := tocluster.tar
 
 SYN_OUT_DIR := SynapseDetection
 SYN_IN_DIR := synapse_isbi2013
 
+# Change these to define a different train/valid split.
+# Note these are python expressions.
+#
 TRAIN_SLICES := "range(0,70)"
 VALID_SLICES := "range(70,100)"
 ALL_SLICES := "range(100)"
 
 # The naming convention we used was "Y_train.mat" was synapse-vs-all while
 # "Y_train2.mat" was synapse-vs-non-synapse-membranes.
+#
 Y_TRAIN := Y_train2.mat
 
 # set ROTATE to {0,1} for {fewer,more} rotations of training data
+#
 ROTATE := 1
 
 # Set mask to a non-empty string (filename) if you want to specify
 # a subset of the test cube to evaluate (e.g. subsampling).
+#
 TEST_MASK := ""
 #TEST_MASK := $(SYN_IN_DIR)/M5.mat
 
 
 # the trained model to use for deploy targets
+#
 MODEL := $(SYN_OUT_DIR)/iter_080000.caffemodel
 
 
 #-------------------------------------------------------------------------------
-# Everything from here on down should be system-independent
-# (so hopefully no changes needed beyond this point)
+# These macros are to help make a path-independent tarfile
+# They should be system independent and can be left alone.
 #-------------------------------------------------------------------------------
 dirname = $(patsubst %/,%,$(dir $1))
 
