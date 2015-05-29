@@ -48,6 +48,7 @@
 # can leave this macro unchanged.
 #-------------------------------------------------------------------------------
 CAFFE_DIR := ~/Apps/caffe/python
+#CAFFE_DIR := ~/Apps/caffe-master.may.29.2015/python
 EM_DATA_DIR := ~/Data/SynapseData3
 
 COCA_DIR := ./coca
