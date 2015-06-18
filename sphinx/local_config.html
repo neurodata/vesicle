@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration &mdash; manno v1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ocp_favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="manno v1.0 documentation" href="../index.html"/>
+        <link rel="next" title="OCP" href="ocp.html"/>
+        <link rel="prev" title="Introduction" href="introduction.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> manno
+        
+
+        
+          
+          <img src="../_static/ocp_main.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loni-installation-notes">LONI Installation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#detailed-loni-tips-for-new-users">Detailed LONI tips for new users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ocp.html">OCP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ocp.html#contributing">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocp.html#style-guides">Style Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ocp.html#ocp-support-forums">OCP Support Forums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/basic_usage.html">Basic Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/basic_usage.html#protocol">Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/basic_usage.html#usage-notes">Usage Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/basic_usage.html#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/basic_usage.html#validation">Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/objdetect.html">Object Detection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/objdetect.html#byooda-bring-your-own-object-detection-algorithm">BYOODA:  Bring Your Own Object Detection Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclerf.html">vesicle-rf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#training">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#evaluation">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#deployment">Deployment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclerf.html#validation">Validation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclecnn.html">vesicle-cnn</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Paper</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../paper/inputdata.html">Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac4">AC4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac3">AC3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/outputdata.html">Data Derivatives</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Further Reading</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/functions.html">vesicle-rf Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/functions.html#vesicle-cnn-functions">vesicle-cnn Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitter.im/openconnectome/vesicle">Gitter chatroom</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/ocp-support/">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle">Github repo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle/releases/">Release Notes</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">manno</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/sphinx/local_config.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>In order to use this truthing protocol, users should have the following software installed and configured appropriately.  A working understanding of machine learning and RAMON (TODO) are helpful but not absolutely required.  Their installation and configuration are documented on the linked websites:</p>
+<ul class="simple">
+<li>A recent version of MATLAB [vesicle-rf] <a class="reference external" href="http://www.mathworks.com">http://www.mathworks.com</a></li>
+<li><a class="reference external" href="http://github.com/openconnectome/cajal">CAJAL Toolbox</a></li>
+<li>LONI Pipeline 6.x for distributed computing <a class="reference external" href="http://pipeline.loni.usc.edu">http://pipeline.loni.usc.edu</a></li>
+<li>caffe and pycaffe [vesicle-cnn] <a class="reference external" href="http://caffe.berkeleyvision.org/">http://caffe.berkeleyvision.org/</a></li>
+<li>Caffe-based Object Classification and Annotation (COCA) [vesicle-cnn] <a class="reference external" href="https://github.com/iscoe/coca">https://github.com/iscoe/coca</a></li>
+</ul>
+<p><em>vesicle-rf and vesicle-cnn have only been tested on mac and linux systems.</em></p>
+<div class="section" id="loni-installation-notes">
+<h2>LONI Installation Notes<a class="headerlink" href="#loni-installation-notes" title="Permalink to this headline">¶</a></h2>
+<p>The workflow has been written to be simple to use and install.  The standalone MATLAB code has a driver script.  To demo the LONI distributed pipeline, To use this, follow the prerequisites and setup instructions and click RUN.  (estimated time to complete: 30-60 minutes prep-time and 10 minutes runtime).  If you are a new user, we recommend you install code in our suggested locations so that you don&#8217;t need to modify the workflow.  The workflow should &#8220;just work.&#8221;  You are welcome to write to our test annotation token, or get your own.</p>
+<p>At a high-level, users should:</p>
+<ul class="simple">
+<li>Make sure that the two environment variables specified (for CAJAL and MATLAB) are on your LONI path for the vesicle package.</li>
+</ul>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">MATLAB_EXE_LOCATION</span><span class="o">=</span><span class="s1">&#39;/Applications/MATLAB_R2014b.app/bin/matlab&#39;</span>
+<span class="nv">CAJAL_LOCATION</span><span class="o">=</span><span class="s1">&#39;/mnt/pipeline/tools/cajal&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Adjust execution paths for modules and temp directories</li>
+</ul>
+<div class="section" id="detailed-loni-tips-for-new-users">
+<h3>Detailed LONI tips for new users<a class="headerlink" href="#detailed-loni-tips-for-new-users" title="Permalink to this headline">¶</a></h3>
+<p>For LONI, we assume the following installation paths:</p>
+<ul class="simple">
+<li>LONI: <code class="docutils literal"><span class="pre">/Applications/LONI6</span></code></li>
+<li>CAJAL: <code class="docutils literal"><span class="pre">/mnt/pipeline/tools/CAJAL</span></code></li>
+<li>temp directory: <code class="docutils literal"><span class="pre">/mnt/tmp</span></code></li>
+</ul>
+<p>If running in LONI client mode, you may wish to add environment variables to your bash startup file to facilitate testing.</p>
+<p>On a Mac, this is best accomplished by adding the environment variables to your ~.bashrc file.  Because of the way that terminals are launched on a mac, it may be helpful to also create a ~/.bash_profile file with the following contents:</p>
+<p>To launch LONI Pipeline to  Mac specific instructions:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="k">if</span> <span class="o">[</span> -f ~/.bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+ <span class="nb">source</span> ~/.bashrc
+<span class="k">fi</span>
+</pre></div>
+</div>
+<p>When using LONI in a distributed server environment, environment variables are set on launch; this is best accomplished in a local processing environment by setting environment variables as documented above.  To launch LONI Pipeline in a way that includes these environment variables, run the following command:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">java</span> <span class="pre">-cp</span> <span class="pre">/Applications/LONI6.app/Contents/Resources/Java/Pipeline.jar</span> <span class="pre">ui.gui.Main</span></code></div></blockquote>
+<p>Finally, to add the LONI modules and workflows from CAJAL to your personal LONI library, select your personal library location from LONI &gt; Preferences &gt; General &gt; Personal Library Directory.  More information is <a class="reference external" href="http://pipeline.loni.usc.edu/learn/user-guide/interface-overview/">here</a>.  Note that you can add multiple locations by specifying symbolic links in your personal library directory.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ocp.html" class="btn btn-neutral float-right" title="OCP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Open Connectome Project.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'v1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

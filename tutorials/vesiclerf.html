@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>vesicle-rf &mdash; manno v1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ocp_favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="manno v1.0 documentation" href="../index.html"/>
+        <link rel="next" title="vesicle-cnn" href="vesiclecnn.html"/>
+        <link rel="prev" title="Object Detection" href="objdetect.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        
+          <a href="../index.html" class="icon icon-home"> manno
+        
+
+        
+          
+          <img src="../_static/ocp_main.png" class="logo" />
+        
+        </a>
+
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/local_config.html">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/local_config.html#loni-installation-notes">LONI Installation Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sphinx/local_config.html#detailed-loni-tips-for-new-users">Detailed LONI tips for new users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/ocp.html">OCP</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/ocp.html#contributing">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/ocp.html#style-guides">Style Guides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx/ocp.html#ocp-support-forums">OCP Support Forums</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/faq.html">Frequently Asked Questions (FAQ)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="objdetect.html">Object Detection</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="objdetect.html#byooda-bring-your-own-object-detection-algorithm">BYOODA:  Bring Your Own Object Detection Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">vesicle-rf</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#training">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#evaluation">Evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment">Deployment</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#block-processing-notes">Block Processing Notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#validation">Validation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vesiclecnn.html">vesicle-cnn</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Paper</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../paper/inputdata.html">Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac4">AC4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac3">AC3</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/outputdata.html">Data Derivatives</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Further Reading</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/functions.html">vesicle-rf Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/functions.html#vesicle-cnn-functions">vesicle-cnn Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitter.im/openconnectome/vesicle">Gitter chatroom</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/ocp-support/">Mailing List</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle">Github repo</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle/releases/">Release Notes</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">manno</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>vesicle-rf</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/tutorials/vesiclerf.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="vesicle-rf">
+<h1>vesicle-rf<a class="headerlink" href="#vesicle-rf" title="Permalink to this headline">¶</a></h1>
+<p>To find the graph edges, we develop a lightweight, scalable Random Forest-based synapse classifier. We combine texture (i.e., intensity measures, image gradient magnitude, local binary patterns, structure tensors) with biological context (i.e., membranes and vesicles). We pruned a large feature set to just ten features and used this information to train a random forest. The pixel-level probabilities produced by the classifier were grouped into objects using size and probability thresholds and a connected component analysis. This method requires substantially less RAM than previous methods, which enables large-scale processing. A key insight was identifying neurotransmitter-containing vesicles present near (chemical, mammalian) synapses.</p>
+<p>These were located using a lightweight template correlation method and clustering. Performance was further enhanced by leveraging the high probability membrane voxels to restrict our search, improving both speed and precision. Our synapse performance was evaluated using the F1 object detection score, computed as the harmonic mean of the precision and recall, based on a gold-standard, neuroanatomist-derived dataset. We took care to define our object detection metric to disallow a single detection counting for multiple true synapses (as that result is ambiguous and allows for a single detection covering the whole volume to produce an F1 score of 1).</p>
+<p>vesicle-rf is divided into three major sections:  training, evaluation, and deployment.</p>
+<div class="section" id="preprocessing">
+<h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
+<p>Membrane detection is accomplished using caffe and is documented separately here (TODO).  vesicle-rf assumes that membrane detection is completed for the region of interest prior to synapse detection.</p>
+<p>Vesicle detection (here referring to neurotransmitter-containing vesicles) is accomplished using template matching (derived from the source dataset).  To run vesicle detection on a dataset the following function should be used (TODO).</p>
+<p>(HERE THE VESICLE FUNCTION IS EXPLAINED IN WORDS)</p>
+</div>
+<div class="section" id="training">
+<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
+<p>A training workflow - exists to download manual annotations and data and build a classifier (TODO).</p>
+<p>(HERE THE TRAINING WORKFLOW OR SCRIPT IS INCLUDED)</p>
+</div>
+<div class="section" id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
+<p>An evaluation workflow - based on a previously computed classifer, vesicle detections and membranes, synapses are computed for a single block of data and performance is computed.</p>
+<p>(THIS IS A MATLAB SCRIPT AND PROBABLY ALSO A LONI WORKFLOW)</p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>A deployment workflow - based on an operating point chosen in the evaluation step, this workflow runs at a chosen operating point across a larger dataset, and includes an example of block processing and merging. (TODO).</p>
+<div class="section" id="block-processing-notes">
+<h3>Block Processing Notes<a class="headerlink" href="#block-processing-notes" title="Permalink to this headline">¶</a></h3>
+<p>When running large datasets out of memory, cube boundaries need to be carefully considered. There are several ways to address this issue, all with various performance and accuracy considerations.</p>
+<p>Our object detection model is to do pixel level probability computations with padding, so that each pixel is evaluated with its proper context.</p>
+<p>Next, blocks are downloaded with a large pad (pad size is larger than a synapse), and objects are found through thresholding and connected components.  Objects that touch the cuboid boudary are discarded, as they will be uploaded in a subsequent block.  Finally, the remaining detections are uploaded; duplicates are eliminated by overwriting the previously uploaded detection and then eliminating duplicates.</p>
+</div>
+</div>
+<div class="section" id="validation">
+<h2>Validation<a class="headerlink" href="#validation" title="Permalink to this headline">¶</a></h2>
+<p>The expected results for the vesicle-rf evaluation pipeline, using default parameters and regions are as follows (pr-evaluate output). (NB: This is initially intended as a capability demonstration, and should not be used to assess the underlying algorithm quality, as it is for a very small region and is not tuned).</p>
+<p>For validation purposes, several (read only) tokens have been created, all on openconnecto.me:</p>
+<p>These are defined for the AC3 Region:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">XRange</span> <span class="o">=</span> <span class="o">[</span>5472, 6496<span class="o">]</span>
+<span class="nv">YRange</span> <span class="o">=</span> <span class="o">[</span>8712, 9736<span class="o">]</span>
+<span class="nv">ZRange</span> <span class="o">=</span> <span class="o">[</span>1000,1256<span class="o">]</span>
+<span class="nv">resolution</span> <span class="o">=</span> 1
+</pre></div>
+</div>
+<ul class="simple">
+<li>Server for all tokens is: <code class="docutils literal"><span class="pre">openconnecto.me</span></code></li>
+<li>EM token: <code class="docutils literal"><span class="pre">kashuri11cc</span></code></li>
+<li>Membrane token: <code class="docutils literal"><span class="pre">kasthuri11_ac3_membranes</span></code></li>
+<li>Vesicle token: <code class="docutils literal"><span class="pre">kasthuri11cc_ac3_vesicles</span></code></li>
+<li>Synapse truth token: <code class="docutils literal"><span class="pre">kasthuri11_ac3_synapseTruth</span></code></li>
+<li>Object Detection Reference Result (for z slices 1220-1236): <code class="docutils literal"><span class="pre">exampleObjDetect</span></code></li>
+<li>Writable tokens for testing are: <code class="docutils literal"><span class="pre">testObjDetect3</span></code> and <code class="docutils literal"><span class="pre">testObjDetect4</span></code></li>
+</ul>
+<p>The entire workflow should have a runtime of about 10 minutes (2014 Macbook Pro, 3GHz, i7, 16GB RAM):</p>
+<div class="highlight-bash"><div class="highlight"><pre>Number Synapses detected: 22
+
+<span class="nv">metrics</span> <span class="o">=</span>
+precision: 0.7273
+recall: 0.4211
+TP: 16
+FP: 6
+FN: 22
+</pre></div>
+</div>
+<p>A cutout of this result can be visualized using the following URL: <a class="reference external" href="http://openconnecto.me/ocp/overlay/0.6/exampleObjDetect/xy/1/5472,6496/8712,9736/1225/">http://openconnecto.me/ocp/overlay/0.6/exampleObjDetect/xy/1/5472,6496/8712,9736/1225/</a> or below.</p>
+<div class="figure align-center">
+<img alt="../_images/vesiclerf_validation.png" src="../_images/vesiclerf_validation.png" />
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="vesiclecnn.html" class="btn btn-neutral float-right" title="vesicle-cnn" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="objdetect.html" class="btn btn-neutral" title="Object Detection" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Open Connectome Project.
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'v1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
