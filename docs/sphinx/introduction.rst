@@ -1,0 +1,9 @@
+Introduction
+************
+
+An open challenge problem at the forefront of modern neuroscience is to obtain a comprehensive mapping of the neural pathways that underlie human brain function; an enhanced understanding of the wiring diagram of the brain promises to lead to new breakthroughs in diagnosing and treating neurological disorders. Inferring brain structure from image data, such as that obtained via electron microscopy (EM), entails solving the problem of identifying biological structures in large data volumes. Synapses, which are a key communication structure in the brain, are particularly difficult to detect due to their small size and limited contrast. Prior work in automated synapse detection has relied upon time-intensive biological preparations (post-staining, isotropic slice thicknesses) in order to simplify the problem. 
+
+This work presents VESICLE, the first known approach designed for mammalian synapse detection in anisotropic, non-post-stained data. Our methods explicitly leverage biological context, and the results exceed existing synapse detection methods in terms of accuracy and scalability. We provide two different approaches - one a deep learning classifier (VESICLE-CNN) and one a lightweight Random Forest approach (VESICLE-RF) to offer alternatives in the performance-scalability space. Addressing this synapse detection challenge enables the analysis of high-throughput imaging data soon expected to reach petabytes of data, and provide tools for more rapid estimation of brain-graphs. Finally, to facilitate community efforts, we developed tools for large-scale object detection, and demonstrated this framework to find ≈ 50,000 synapses in 60,000 μm3 (220 GB on disk) of electron microscopy data.
+
+.. figure:: ../images/vesicle_scalable_paper.jpg
+    :align: center
