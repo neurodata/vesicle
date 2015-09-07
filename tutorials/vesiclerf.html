@@ -111,16 +111,23 @@
 <li class="toctree-l2"><a class="reference internal" href="#validation">Validation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="vesiclecnn.html">vesicle-cnn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vesiclecnn.html">vesicle-cnn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vesiclecnn.html#preprocessing">Preprocessing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vesiclecnn.html#training">Training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vesiclecnn.html#deployment">Deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vesiclecnn.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Paper</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../paper/inputdata.html">Input Data</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac4">AC4</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../paper/inputdata.html#ac3">AC3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/bmvc.html">BMVC 2015</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../paper/bmvc.html#citation">Citation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../paper/bmvc.html#conference-materials">Conference Materials</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../paper/outputdata.html">Data Derivatives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/inputdata.html">Input Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/results.html">View Results</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Further Reading</span></p>
 <ul>
@@ -175,23 +182,20 @@
 <p>vesicle-rf is divided into three major sections:  training, evaluation, and deployment.</p>
 <div class="section" id="preprocessing">
 <h2>Preprocessing<a class="headerlink" href="#preprocessing" title="Permalink to this headline">¶</a></h2>
-<p>Membrane detection is accomplished using caffe and is documented separately here (TODO).  vesicle-rf assumes that membrane detection is completed for the region of interest prior to synapse detection.</p>
-<p>Vesicle detection (here referring to neurotransmitter-containing vesicles) is accomplished using template matching (derived from the source dataset).  To run vesicle detection on a dataset the following function should be used (TODO).</p>
-<p>(HERE THE VESICLE FUNCTION IS EXPLAINED IN WORDS)</p>
+<p>Membrane detection is accomplished using caffe and is documented separately.  vesicle-rf assumes that membrane detection is completed for the region of interest prior to synapse detection.</p>
+<p>Vesicle detection (here referring to neurotransmitter-containing vesicles) is accomplished using template matching (derived from the source dataset).</p>
 </div>
 <div class="section" id="training">
 <h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
-<p>A training workflow - exists to download manual annotations and data and build a classifier (TODO).</p>
-<p>(HERE THE TRAINING WORKFLOW OR SCRIPT IS INCLUDED)</p>
+<p>A training workflow exists to download manual annotations and data and build a classifier.  Details coming soon.</p>
 </div>
 <div class="section" id="evaluation">
 <h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
 <p>An evaluation workflow - based on a previously computed classifer, vesicle detections and membranes, synapses are computed for a single block of data and performance is computed.</p>
-<p>(THIS IS A MATLAB SCRIPT AND PROBABLY ALSO A LONI WORKFLOW)</p>
 </div>
 <div class="section" id="deployment">
 <h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
-<p>A deployment workflow - based on an operating point chosen in the evaluation step, this workflow runs at a chosen operating point across a larger dataset, and includes an example of block processing and merging. (TODO).</p>
+<p>A deployment workflow - based on an operating point chosen in the evaluation step, this workflow runs at a chosen operating point across a larger dataset, and includes an example of block processing and merging.</p>
 <div class="section" id="block-processing-notes">
 <h3>Block Processing Notes<a class="headerlink" href="#block-processing-notes" title="Permalink to this headline">¶</a></h3>
 <p>When running large datasets out of memory, cube boundaries need to be carefully considered. There are several ways to address this issue, all with various performance and accuracy considerations.</p>
