@@ -11,9 +11,9 @@
 	<br>
 
 
-vesicle provides a context-aware method for scalable synapse detection in anisotropic electron microscopy data.  We provide two methods for object detection:  vesicle-rf and vesicle-cnn, which have computational and performance tradeoffs.  
+vesicle provides a context-aware method for scalable synapse detection in anisotropic electron microscopy data.  We provide two methods for object detection:  vesicle-rf and vesicle-cnn, which have computational and performance tradeoffs.
 
-This work also resulted in the creation of a general-purpose object detection framework that can be used in a LONI environment.  We explain this detection paradigm and provide vesicle-rf code as an example.
+This work also resulted in the creation of a general-purpose object detection framework that can be used in a LONI pipelining environment.  We explain this detection paradigm and provide vesicle-rf code as an example.
 
 .. figure:: images/vesicle_banner.jpg
     :width: 800px
@@ -21,19 +21,19 @@ This work also resulted in the creation of a general-purpose object detection fr
 
 
 .. raw:: html
- 
+
   <div>
     <img style="width:30px;height:30px;vertical-align:middle">
     <span style=""></span>
-    <IMG SRC="_static/GitHub.png" height="50" width="50"> <a href="https://github.com/openconnectome/vesicle/zipball/master"> [ZIP]   </a>  
+    <IMG SRC="_static/GitHub.png" height="50" width="50"> <a href="https://github.com/openconnectome/vesicle/zipball/master"> [ZIP]   </a>
     <a image="_static/GitHub.png" href="https://github.com/openconnectome/vesicle/tarball/master">[TAR.GZ] </a></p>
   </div>
 
 
-.. sidebar:: vesicle Contact Us 
-   
+.. sidebar:: vesicle Contact Us
+
    If you have questions about vesicle, or have data to analyze, let us know:  ocp-support@googlegroups.com
-   
+
 .. toctree::
    :maxdepth: 1
    :caption: Documentation
@@ -42,7 +42,7 @@ This work also resulted in the creation of a general-purpose object detection fr
    sphinx/local_config
    sphinx/ocp
    sphinx/faq
-   
+
 
 .. toctree::
    :maxdepth: 1
@@ -51,13 +51,14 @@ This work also resulted in the creation of a general-purpose object detection fr
    tutorials/objdetect
    tutorials/vesiclerf
    tutorials/vesiclecnn
-   
+
 .. toctree::
    :maxdepth: 1
    :caption: Paper
 
+   paper/bmvc
    paper/inputdata
-   paper/outputdata
+   paper/results
 
 .. toctree::
    :maxdepth: 1
@@ -66,11 +67,9 @@ This work also resulted in the creation of a general-purpose object detection fr
    api/functions
    api/modules
    Gitter chatroom <https://gitter.im/openconnectome/vesicle>
-   Mailing List <https://groups.google.com/forum/#!forum/ocp-support/> 
+   Mailing List <https://groups.google.com/forum/#!forum/ocp-support/>
    Github repo <https://github.com/openconnectome/vesicle>
    Release Notes <https://github.com/openconnectome/vesicle/releases/>
 
 If you use vesicle or its data derivatives, please cite:
-  William Gray Roncal, Michael Pekala, Verena Kaynig-Fittkau, Dean M. Kleissas, Joshua T. Vogelstein, Hanspeter Pfister, Randal Burns, R. Jacob Vogelstein, Mark A. Chevillet, Gregory D. Hager. "VESICLE: Volumetric Evaluation of Synaptic Inferfaces using Computer vision at Large Scale."" *In Review*, 2015 `arXiv <http://arxiv.org/abs/1403.3724>`_.
-
-  
+  William Gray Roncal, Michael Pekala, Verena Kaynig-Fittkau, Dean M Kleissas, Joshua T Vogelstein, Hanspeter Pfister, Randal Burns, R Jacob Vogelstein, Mark A Chevillet and Gregory D Hager. VESICLE: Volumetric Evaluation of Synaptic Interfaces using Computer Vision at Large Scale. In Xianghua Xie, Mark W. Jones, and Gary K. L. Tam, editors, Proceedings of the British Machine Vision Conference (BMVC), pages 81.1-81.13. BMVA Press, September 2015.

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pipeline version=".2">
+        <icons>
+                <icon id="0" value="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&#xA;J3ilbILs4wAAAABJRU5ErkJggg==" />
+        </icons>
+        <moduleGroup id="Untitled_1" name="Untitled" posX="0" posY="0" sourceCode="">
+                <module id="VesicleDetector_1" name="Vesicle Detector" package="vesicle" version="1.0" description="This module runs a simple vesicle detector based on template matching and distance filtering.&#xA;&#xA;It block uploads the result, so you must create a RAMONOrganelle object first and provide the ID of the empty object." icon="0" posX="184" posY="122" sourceCode="" location="pipeline://braincloud1.cs.jhu.edu//mnt/pipeline/tools/i2g/packages/utilities/basicWrapperI2G.py" executableVersion="1.0" gridVariables="-l virtual_free=32G">
+                        <authors>
+                                <author fullName="Dean Kleissas" email="dean.kleissas@jhuapl.edu" website="www.jhuapl.edu" />
+                        </authors>
+                        <tag>vesicle</tag>
+                        <tag>synapse</tag>
+                        <tag>organelle</tag>
+                        <tag>segmentation</tag>
+                        <tag>RAMON</tag>
+                        <tag>correlation</tag>
+                        <tag>template matching</tag>
+                        <uri>www.openconnecto.me</uri>
+                        <metadata>
+                                <data key="__creationDateKey" value="Fri May 11 12:38:03 EDT 2012" />
+                        </metadata>
+                        <input id="VesicleDetector_1.FunctionName" name="Function Name" description="This is the relative path to MATLAB function you want to execute in relation to the CAJAL3D framework root.  Once it is set it does not need to be changed.  (ex. &quot;/api/matlab/cubeGen/cubeGenCutout.m&quot;)&#xA;&#xA;The location of the CAJAL3D framework root should be set as an environment variable for the CAJAL3DMAT package.  &#xA;ex. CAJAL3D_LOCATION=/usr/pipeline/tools/CAJAL3D&quot;&#xA;&#xA;" required="true" enabled="true" order="0">
+                                <format type="String" cardinality="1" />
+                                <values>
+                                        <value>packages/vesicle_detector/vesicle_detect_quick.m</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.TemplateFile" name="Template File" description="This is a saved template created using the get_template method offline." required="true" enabled="true" order="2" prefix="-s" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="File" cardinality="1">
+                                        <fileTypes>
+                                                <filetype name="MAT File" extension="mat" description="Matrix describing transformation of image into standard space (found by first_flirt)." />
+                                        </fileTypes>
+                                </format>
+                                <values>
+                                        <value>pipeline://braincloud1.cs.jhu.edu//mnt/pipeline/tools/i2g/data/vesicle_templates_kasthuri11cc.mat</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.AnnotationID" name="Annotation ID" description="ID of the RAMON Organelle object created in advance." required="true" enabled="true" order="3" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Pad X</dependent>
+                                </dependencies>
+                                <values>
+                                        <value>1</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.PadX" name="Pad X" description="Often there are false alarms on the block edges so padding can remove this.  Only the region inscribed by the pad value will be uploaded, so make sure you mirror this setting on Cube Cutout Preprocess or you'll miss data" required="false" enabled="true" order="8" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Pad Y</dependent>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>{padX1}</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.PadY" name="Pad Y" description="Often there are false alarms on the block edges so padding can remove this.  Only the region inscribed by the pad value will be uploaded, so make sure you mirror this setting on Cube Cutout Preprocess or you'll miss data" required="false" enabled="true" order="9" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Neighborhood Size</dependent>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>{padY1}</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.NeighborhoodSize" name="Neighborhood Size" description="Number of neighbors required to keep the vesicle detection.  Default if omitted: 3" required="true" enabled="true" order="4" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Neighborhood Distance</dependent>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                        <dependsOn>Pad Y</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>3</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.NeighborhoodDistance" name="Neighborhood Distance" description="Distance in nm to compute neighbors.  Default if omitted: 120" required="true" enabled="true" order="5" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Threshold</dependent>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                        <dependsOn>Pad Y</dependsOn>
+                                        <dependsOn>Neighborhood Size</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>120</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.Threshold" name="Threshold" description="Value to threshold the  filter results.  Default if omitted: 1.25" required="true" enabled="true" order="6" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                        <dependsOn>Pad Y</dependsOn>
+                                        <dependsOn>Neighborhood Size</dependsOn>
+                                        <dependsOn>Neighborhood Distance</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>1.25</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.imagevolume" name="image volume" description="image (EM) volume" required="true" enabled="true" order="1" prefix="-s" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="File" cardinality="1">
+                                        <fileTypes>
+                                                <filetype name="File" extension="" description="Any type of data file" />
+                                        </fileTypes>
+                                </format>
+                                <dependencies>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                        <dependsOn>Pad Y</dependsOn>
+                                        <dependsOn>Neighborhood Size</dependsOn>
+                                        <dependsOn>Neighborhood Distance</dependsOn>
+                                        <dependsOn>Threshold</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>{emLocation}</value>
+                                </values>
+                        </input>
+                        <input id="VesicleDetector_1.DataSet" name="Data Set" description="0:  kasthuri11cc&#xA;1:  bock11" required="true" enabled="true" order="7" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <values>
+                                        <value>0</value>
+                                </values>
+                        </input>
+                        <output id="VesicleDetector_1.flow" name="flow" required="false" enabled="true" order="12">
+                                <format type="Flow Control" cardinality="1" />
+                        </output>
+                        <input id="VesicleDetector_1.PadZ" name="Pad Z" description="Often there are false alarms on the block edges so padding can remove this.  Only the region inscribed by the pad value will be uploaded, so make sure you mirror this setting on Cube Cutout Preprocess or you'll miss data" required="false" enabled="true" order="10" prefix="-d" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="Number" cardinality="1" />
+                                <dependencies>
+                                        <dependent>Neighborhood Size</dependent>
+                                        <dependsOn>Annotation ID</dependsOn>
+                                        <dependsOn>Pad X</dependsOn>
+                                </dependencies>
+                                <values>
+                                        <value>{padY1}</value>
+                                </values>
+                        </input>
+                        <output id="VesicleDetector_1.outputFile" name="output File" required="true" enabled="true" order="11" prefix="-s" prefixSpaced="true" prefixAllArgs="false">
+                                <format type="File" cardinality="1">
+                                        <fileTypes>
+                                                <filetype name="Matlab file" extension="mat" description="" />
+                                        </fileTypes>
+                                </format>
+                        </output>
+                        <executableAuthors>
+                                <author fullName="Dean Kleissas" email="dean.kleissas@jhuapl.edu" website="www.jhuapl.edu" />
+                        </executableAuthors>
+                </module>
+                <variables>
+                        <variable name="emToken">kasthuri11cc</variable>
+                        <variable name="padZ2">2</variable>
+                        <variable name="anno_token">testwill1</variable>
+                        <variable name="padX3">300</variable>
+                        <variable name="padZ1">0</variable>
+                        <variable name="memServer">dsp061.pha.jhu.edu</variable>
+                        <variable name="yStop">8600</variable>
+                        <variable name="padX1">50</variable>
+                        <variable name="sToken">is9</variable>
+                        <variable name="yStart">7600</variable>
+                        <variable name="padZ3">25</variable>
+                        <variable name="xStop">8300</variable>
+                        <variable name="segToken">testGala1</variable>
+                        <variable name="aToken">ia9</variable>
+                        <variable name="anno_server">braingraph1dev.cs.jhu.edu</variable>
+                        <variable name="xSpan2">500</variable>
+                        <variable name="xSpan">700</variable>
+                        <variable name="rhoana_cutout">rhoana_cutout.mat</variable>
+                        <variable name="membrane_server">dsp061.pha.jhu.edu</variable>
+                        <variable name="xStart">7300</variable>
+                        <variable name="truth_cutout">truth_cutout.mat</variable>
+                        <variable name="padY1">50</variable>
+                        <variable name="synapse_cutout">synapse_cutout.mat</variable>
+                        <variable name="ySpan2">500</variable>
+                        <variable name="padY3">300</variable>
+                        <variable name="edge_truth_server">openconnecto.me</variable>
+                        <variable name="img_server">braingraph1dev.cs.jhu.edu</variable>
+                        <variable name="zSpan">50</variable>
+                        <variable name="syn_anno_server">braingraph1dev.cs.jhu.edu</variable>
+                        <variable name="csdToken">ic9</variable>
+                        <variable name="zStart">1525</variable>
+                        <variable name="ySpan">700</variable>
+                        <variable name="vToken">bc1_vtest1</variable>
+                        <variable name="Var 1">Value</variable>
+                        <variable name="padX">0</variable>
+                        <variable name="padZ">0</variable>
+                        <variable name="img_token">kasthuri11cc</variable>
+                        <variable name="padY">0</variable>
+                        <variable name="emLocation">http://braingraph1dev.cs.jhu.edu/</variable>
+                        <variable name="membrane_token">kasthuri11_final_membranes</variable>
+                        <variable name="zStop">1625</variable>
+                        <variable name="memToken">ac3_membranes</variable>
+                </variables>
+        </moduleGroup>
+</pipeline>
+
