@@ -1,2 +1,0 @@
-The code to compute structure tensors was written by Verena Kaynig.
-For more information, please visit kaynig.de.

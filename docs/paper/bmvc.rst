@@ -13,4 +13,7 @@ Conference Materials
 
 - The conference 1-page abstract is :download:`here <../_static/grayroncal2015_vesicle_abstract.pdf>`
 - The conference poster is :download:`here <../_static/grayroncal2015_vesicle_poster.pdf>` This contains pointers to the data and results for our BMVC paper.
+
 - The conference paper can be found as part of the `BMVC Conference Proceedings <http://bmvc2015.swansea.ac.uk/proceedings/papers/paper081/index.html>`_
+
+(While the proceedings are being assigned DOIs, they are not online.  An alternative source for the manuscript is `here <arxiv.org/abs/1403.3724>`_)
