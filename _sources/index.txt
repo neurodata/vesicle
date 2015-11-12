@@ -32,7 +32,7 @@ This work also resulted in the creation of a general-purpose object detection fr
 
 .. sidebar:: vesicle Contact Us
 
-   If you have questions about vesicle, or have data to analyze, let us know:  ocp-support@googlegroups.com
+   If you have questions about vesicle, or have data to analyze, let us know:  support@neurodata.io
 
 .. toctree::
    :maxdepth: 1
@@ -40,15 +40,13 @@ This work also resulted in the creation of a general-purpose object detection fr
 
    sphinx/introduction
    sphinx/local_config
-   sphinx/ocp
+   sphinx/neurodata
    sphinx/faq
-
 
 .. toctree::
    :maxdepth: 1
    :caption: Tutorials
 
-   tutorials/objdetect
    tutorials/vesiclerf
    tutorials/vesiclecnn
 
@@ -57,7 +55,6 @@ This work also resulted in the creation of a general-purpose object detection fr
    :caption: Paper
 
    paper/bmvc
-   paper/inputdata
    paper/results
 
 .. toctree::
@@ -65,7 +62,7 @@ This work also resulted in the creation of a general-purpose object detection fr
    :caption: Further Reading
 
    api/functions
-   api/modules
+   api/loni
    Gitter chatroom <https://gitter.im/openconnectome/vesicle>
    Mailing List <https://groups.google.com/forum/#!forum/ocp-support/>
    Github repo <https://github.com/openconnectome/vesicle>

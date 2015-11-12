@@ -33,11 +33,11 @@
 
   
     <link rel="top" title="vesicle v1.0 documentation" href="../index.html"/>
-        <link rel="next" title="OCP" href="ocp.html"/>
+        <link rel="next" title="OCP" href="neurodata.html"/>
         <link rel="prev" title="Introduction" href="introduction.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -47,20 +47,30 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        
-
-        
-          <a href="../index.html" class="icon icon-home"> vesicle
-        
-
-        
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
           
-          <img src="../_static/ocp_main.png" class="logo" />
-        
-        </a>
 
-        
+          
+            <a href="../index.html" class="icon icon-home"> vesicle
+          
+
+          
+            
+            <img src="../_static/ocp_main.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v1.0
+              </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -69,79 +79,55 @@
   </form>
 </div>
 
-        
-      </div>
+          
+        </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
-          
-              <p class="caption"><span class="caption-text">Documentation</span></p>
+            
+            
+                <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#loni-installation-notes">LONI Installation Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#toolbox-installation-notes">Toolbox Installation Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loni-installation-notes-only-needed-for-distributed-processing">LONI Installation Notes (only needed for distributed processing)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#detailed-loni-tips-for-new-users">Detailed LONI tips for new users</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#vesicle-cnn-setup">vesicle-cnn setup</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ocp.html">OCP</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ocp.html#contributing">Contributing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ocp.html#style-guides">Style Guides</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ocp.html#ocp-support-forums">OCP Support Forums</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="neurodata.html">OCP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">Frequently Asked Questions (FAQ)</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/objdetect.html">Object Detection</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/objdetect.html#byooda-bring-your-own-object-detection-algorithm">BYOODA:  Bring Your Own Object Detection Algorithm</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclerf.html">vesicle-rf</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#preprocessing">Preprocessing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#training">Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#evaluation">Evaluation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#deployment">Deployment</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/vesiclerf.html#block-processing-notes">Block Processing Notes</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclerf.html#validation">Validation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclecnn.html">vesicle-cnn</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclecnn.html#preprocessing">Preprocessing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclecnn.html#training">Training</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclecnn.html#deployment">Deployment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/vesiclecnn.html#miscellaneous">Miscellaneous</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclerf.html">vesicle-rf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/deploy.html">Object Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesiclecnn.html">vesicle-cnn</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Paper</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference external" href="http://bmvc2015.swansea.ac.uk/proceedings/papers/paper081/index.html">Link to BMVC Proceedings</a></li>
-<li class="toctree-l1"><a class="reference external" href="http://openconnecto.me/ocp/viz/project/vesicle2015/">Explore Results with OCPViz!</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../paper/inputdata.html">Input Data</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../paper/outputdata.html">Data Derivatives</a></li>
-<li class="toctree-l1"><a class="reference external" href="http://openconnecto.me/ocp/overlay/.6/openconnecto.me/kasthuri11cc/image/openconnecto.me/vesicle_synScale/annotation/xy/1/2300,8300/4300,8300/1100/">http://openconnecto.me/ocp/overlay/.6/openconnecto.me/kasthuri11cc/image/openconnecto.me/vesicle_synScale/annotation/xy/1/2300,8300/4300,8300/1100/</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/bmvc.html">BMVC 2015</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/results.html">vesicle results</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Further Reading</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/functions.html">vesicle-rf Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/functions.html#vesicle-rf-utilities">vesicle-rf Utilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/functions.html#vesicle-cnn-functions">vesicle-cnn Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/loni.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://gitter.im/openconnectome/vesicle">Gitter chatroom</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://groups.google.com/forum/#!forum/ocp-support/">Mailing List</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle">Github repo</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/openconnectome/vesicle/releases/">Release Notes</a></li>
 </ul>
 
+            
           
-        
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -156,7 +142,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
@@ -171,21 +163,35 @@
   </ul>
   <hr/>
 </div>
-          <div role="main" class="document">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
-<p>In order to use this truthing protocol, users should have the following software installed and configured appropriately.  A working understanding of machine learning and RAMON (TODO) are helpful but not absolutely required.  Their installation and configuration are documented on the linked websites:</p>
+<p>In order to use vesiclerf, users should have the following software installed and configured appropriately.  A working understanding of machine learning and RAMON are helpful but not absolutely required.  Their installation and configuration are documented on the linked websites:</p>
 <ul class="simple">
 <li>A recent version of MATLAB [vesicle-rf] <a class="reference external" href="http://www.mathworks.com">http://www.mathworks.com</a></li>
 <li><a class="reference external" href="http://github.com/openconnectome/cajal">CAJAL Toolbox</a></li>
 <li>LONI Pipeline 6.x for distributed computing <a class="reference external" href="http://pipeline.loni.usc.edu">http://pipeline.loni.usc.edu</a></li>
+<li>macho toolbox <a class="reference external" href="http://github.com/openconnectome/macho">http://github.com/openconnectome/macho</a></li>
+<li>vesicle toolbox <a class="reference external" href="http://github.com/openconnectome/macho">http://github.com/openconnectome/macho</a></li>
 <li>caffe and pycaffe [vesicle-cnn] <a class="reference external" href="http://caffe.berkeleyvision.org/">http://caffe.berkeleyvision.org/</a></li>
 <li>Caffe-based Object Classification and Annotation (COCA) [vesicle-cnn] <a class="reference external" href="https://github.com/iscoe/coca">https://github.com/iscoe/coca</a></li>
 </ul>
 <p><em>vesicle-rf and vesicle-cnn have only been tested on mac and linux systems.</em></p>
-<div class="section" id="loni-installation-notes">
-<h2>LONI Installation Notes<a class="headerlink" href="#loni-installation-notes" title="Permalink to this headline">¶</a></h2>
+<p><strong>Users are encouraged to use the NeuroData AMI, which is pre-setup for vesicle.  Because of limitations with the MATLAB license, please contact us for detailed instructions if you have difficulty.</strong></p>
+<div class="section" id="toolbox-installation-notes">
+<h2>Toolbox Installation Notes<a class="headerlink" href="#toolbox-installation-notes" title="Permalink to this headline">¶</a></h2>
+<p>More comprehensive documentation on each toolbox is available at the homepage for the respective repositories.  Users can get setup quickly for (train,evaluate) processing by taking the following steps from within matlab:</p>
+<div class="highlight-bash"><div class="highlight"><pre>run<span class="o">(</span><span class="s1">&#39;/share0/cajal/tools/matlab_install/setupEnvironment.m&#39;</span><span class="o">)</span>
+run<span class="o">(</span><span class="s1">&#39;/share0/cajal/cajal.m&#39;</span><span class="o">)</span>
+cajal.installToolbox<span class="o">(</span><span class="s1">&#39;~/code/macho/setup.m&#39;</span><span class="o">)</span>
+cajal.installToolbox<span class="o">(</span><span class="s1">&#39;~/code/vesicle/setup.m&#39;</span><span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loni-installation-notes-only-needed-for-distributed-processing">
+<h2>LONI Installation Notes (only needed for distributed processing)<a class="headerlink" href="#loni-installation-notes-only-needed-for-distributed-processing" title="Permalink to this headline">¶</a></h2>
 <p>The workflow has been written to be simple to use and install.  The standalone MATLAB code has a driver script.  To demo the LONI distributed pipeline, To use this, follow the prerequisites and setup instructions and click RUN.  (estimated time to complete: 30-60 minutes prep-time and 10 minutes runtime).  If you are a new user, we recommend you install code in our suggested locations so that you don&#8217;t need to modify the workflow.  The workflow should &#8220;just work.&#8221;  You are welcome to write to our test annotation token, or get your own.</p>
 <p>At a high-level, users should:</p>
 <ul class="simple">
@@ -203,8 +209,8 @@
 <p>For LONI, we assume the following installation paths:</p>
 <ul class="simple">
 <li>LONI: <code class="docutils literal"><span class="pre">/Applications/LONI6</span></code></li>
-<li>CAJAL: <code class="docutils literal"><span class="pre">/mnt/pipeline/tools/CAJAL</span></code></li>
-<li>temp directory: <code class="docutils literal"><span class="pre">/mnt/tmp</span></code></li>
+<li>CAJAL: <code class="docutils literal"><span class="pre">/share0/cajal</span></code></li>
+<li>temp directory: <code class="docutils literal"><span class="pre">/tmp</span></code></li>
 </ul>
 <p>If running in LONI client mode, you may wish to add environment variables to your bash startup file to facilitate testing.</p>
 <p>On a Mac, this is best accomplished by adding the environment variables to your ~.bashrc file.  Because of the way that terminals are launched on a mac, it may be helpful to also create a ~/.bash_profile file with the following contents:</p>
@@ -220,15 +226,20 @@
 <p>Finally, to add the LONI modules and workflows from CAJAL to your personal LONI library, select your personal library location from LONI &gt; Preferences &gt; General &gt; Personal Library Directory.  More information is <a class="reference external" href="http://pipeline.loni.usc.edu/learn/user-guide/interface-overview/">here</a>.  Note that you can add multiple locations by specifying symbolic links in your personal library directory.</p>
 </div>
 </div>
+<div class="section" id="vesicle-cnn-setup">
+<h2>vesicle-cnn setup<a class="headerlink" href="#vesicle-cnn-setup" title="Permalink to this headline">¶</a></h2>
+<p>This material is covered in the tutorials section and the readme for each of the respective repositories.</p>
+</div>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ocp.html" class="btn btn-neutral float-right" title="OCP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="neurodata.html" class="btn btn-neutral float-right" title="OCP" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -240,10 +251,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Open Connectome Project.
+        &copy; Copyright 2015, NeuroData.
+
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
