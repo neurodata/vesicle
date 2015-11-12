@@ -128,6 +128,9 @@ Deployment
 
 A deployment workflow - based on an operating point chosen in the evaluation step runs in LONI and includes functionality to merge across cuboid boundaries and compute centroids for each object.
 
+.. figure:: ../images/loni_deploy_vesicle.png
+    :align: center
+
 Example Usage
 -------------
 
