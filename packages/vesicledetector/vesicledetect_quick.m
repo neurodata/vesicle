@@ -62,6 +62,7 @@ end
 %% Load Template
 load(template);
 
+emptyFlag = 0;
 %% Run Correlation
 [x,y,z] = size(data);
 
@@ -116,42 +117,45 @@ cc_props = regionprops(cc,'pixelList');
 if isempty(centroids)
     % no detections!
     fprintf('Non-empty block, but no detections!')
-    labels = [];
-    return;
-end
-data_set
-% Fix anisotropy at scale 1 and put into nm
-if data_set == 0
-    centroids = bsxfun(@times,centroids,[6,6,30]);
-elseif data_set == 1
-    centroids = bsxfun(@times,centroids,[8,8,45]);
-else
-    error('unsupported dataset');
+    labels = zeros(size(cube.data));
+    
+    emptyFlag = 1;
 end
 
-% Compute distances
-D = squareform(pdist(centroids));
-
-D(D > neighbor_dist) = 0;
-D(D > 0) = 1;
-
-neighbors = sum(D,2);
-
-out_clusters = find(neighbors < neighborhood_size);
-
-for ii = 1:length(out_clusters)
-    px = cc_props(out_clusters(ii)).PixelList;
-    inds = sub2ind(size(matches),px(:,2),px(:,1),px(:,3));
-    matches(inds) = 0;
+if ~emptyFlag
+    % Fix anisotropy at scale 1 and put into nm
+    if data_set == 0
+        centroids = bsxfun(@times,centroids,[6,6,30]);
+    elseif data_set == 1
+        centroids = bsxfun(@times,centroids,[8,8,45]);
+    else
+        error('unsupported dataset');
+    end
+    
+    % Compute distances
+    D = squareform(pdist(centroids));
+    
+    D(D > neighbor_dist) = 0;
+    D(D > 0) = 1;
+    
+    neighbors = sum(D,2);
+    
+    out_clusters = find(neighbors < neighborhood_size);
+    
+    for ii = 1:length(out_clusters)
+        px = cc_props(out_clusters(ii)).PixelList;
+        inds = sub2ind(size(matches),px(:,2),px(:,1),px(:,3));
+        matches(inds) = 0;
+    end
+    
+    %% Output
+    se = strel('disk', 4, 0);
+    labels = imdilate(matches,se,'same');
 end
-
-%% Output
-se = strel('disk', 4, 0);
-labels = imdilate(matches,se,'same');
 
 %Reuse cube volume
 off = cube.xyzOffset;
 labels = labels(padX+1:end-padX, padY+1:end-padY, padZ+1:end-padZ)* annoId;
 cube.setCutout(labels);
-
-save(outFile,'cube')
+cube.setXyzOffset([off+[padX,padY,padZ]]);
+save(outFile,'cube','-v7.3')
