@@ -12,7 +12,7 @@ load(queryFile)
 
 cube = oo.query(query);
 
-if cube.data(:) > 0
+if sum(cube.data(:)) > 0
     zz = tempname;
     
     vesicledetect_quick(cube, template, annoId, neighborhood_size, neighbor_dist, thresh, data_set, padX, padY, padZ, zz)

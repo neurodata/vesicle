@@ -4,10 +4,10 @@ function vesicledetect_quick(RAMONVol, template, annoId, neighborhood_size, neig
 % **Inputs**
 %
 %	RAMONVol: (string)
-%		-
+%		- Location of mat file containing an image matrix stored in a RAMONVolume named cube.
 %
 %	template: (string)
-%		-
+%		- Path to file containing template extracted from this dataset
 %
 %	neighborhood_size: (uint)
 %		- Size of neighborhood for algorithm
@@ -118,7 +118,7 @@ if isempty(centroids)
     % no detections!
     fprintf('Non-empty block, but no detections!')
     labels = zeros(size(cube.data));
-    
+
     emptyFlag = 1;
 end
 
@@ -131,23 +131,23 @@ if ~emptyFlag
     else
         error('unsupported dataset');
     end
-    
+
     % Compute distances
     D = squareform(pdist(centroids));
-    
+
     D(D > neighbor_dist) = 0;
     D(D > 0) = 1;
-    
+
     neighbors = sum(D,2);
-    
+
     out_clusters = find(neighbors < neighborhood_size);
-    
+
     for ii = 1:length(out_clusters)
         px = cc_props(out_clusters(ii)).PixelList;
         inds = sub2ind(size(matches),px(:,2),px(:,1),px(:,3));
         matches(inds) = 0;
     end
-    
+
     %% Output
     se = strel('disk', 4, 0);
     labels = imdilate(matches,se,'same');
