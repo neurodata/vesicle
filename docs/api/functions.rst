@@ -5,8 +5,6 @@ vesicle-rf Functions
 .. autofunction:: packages.vesiclerf.vesiclerf_train
 .. autofunction:: packages.vesiclerf.vesiclerf_probs
 .. autofunction:: packages.vesiclerf.vesiclerf_object
-.. autofunction:: packages.vesiclerf.vesiclerf_feats
-.. autofunction:: packages.vesicledetector.vesicledetect_quick
 
 vesicle-rf Utilities
 ********************

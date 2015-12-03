@@ -1,4 +1,5 @@
 function xt = vesiclerf_feats(em, idxToTest, vesicles)
+
 % Function to compute features for synapse detection.
 %
 % **Inputs**
